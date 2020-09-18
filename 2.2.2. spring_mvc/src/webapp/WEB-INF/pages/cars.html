@@ -7,7 +7,27 @@
 </head>
 <body>
 
-<p th:text="${listCars}"></p>
+<table border="3">
+
+    <h3 th:text="${locale}">
+
+    </h3>
+
+    <tr>
+        <th>Id</th>
+        <th>Brend</th>
+        <th>Series</th>
+    </tr>
+
+    <tr th:each="car: ${carList}">
+
+        <td th:utext="${car.id}">Id</td>
+        <td th:utext="${car.brend}">Brend</td>
+        <td th:utext="${car.series}">Series</td>
+
+    </tr>
+
+</table>
 
 </body>
 </html>
